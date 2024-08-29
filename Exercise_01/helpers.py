@@ -1,9 +1,5 @@
 import os
 from PIL import Image
-import numpy as np
-import matplotlib.pyplot as plt
-from setuptools.config.pyprojecttoml import load_file
-
 
 def load_image(path):
     """
@@ -45,5 +41,3 @@ def get_images_list(path):
                 img = load_image(file_path)
                 image_list.append(img)
     return image_list
-
-
