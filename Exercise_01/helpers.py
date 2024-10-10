@@ -1,4 +1,6 @@
 import os
+
+import cv2
 from PIL import Image
 
 def load_image(path):
@@ -41,3 +43,8 @@ def get_images_list(path):
                 img = load_image(file_path)
                 image_list.append(img)
     return image_list
+
+def display_img(title, img):
+    cv2.imshow(title, img)
+    cv2.waitKey(0)
+    cv2.destroyWindow(title)
